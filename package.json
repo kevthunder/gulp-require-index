@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Generate a index.js file that is exporting all the specified files",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kevthunder/gulp-require-index.git"
+  },
   "scripts": {
     "test": "mocha",
     "lint": "eslint index.js test --fix"

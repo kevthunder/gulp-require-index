@@ -86,7 +86,9 @@ class GenerateIndex extends through.ctor() {
 }
 
 GenerateIndex.defOpt = {
-  name: 'index.js'
+  name: 'index.js',
+  dest: null,
+  flat: false
 }
 
 module.exports = function (name = 'index.js') {
