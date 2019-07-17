@@ -15,7 +15,7 @@ describe('gulp-require-index', function () {
     delete require.cache[require.resolve('./output/index.js')]
   })
 
-  it.only('can create an index file', function (done) {
+  it('can create an index file', function (done) {
     return gulp.src(['./test/files/**/*.js'])
       .pipe(gulpRequireIndex({ dest: './test/output/' }))
       .pipe(gulp.dest('./test/output/'))
