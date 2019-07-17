@@ -1,0 +1,35 @@
+{
+  "name": "gulp-require-index",
+  "version": "0.0.1",
+  "description": "Generate a index.js file that is exporting all the specified files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint index.js test --fix"
+  },
+  "keywords": [
+    "gulp",
+    "index",
+    "require"
+  ],
+  "author": "Kevin Giguere Lacasse",
+  "license": "ISC",
+  "dependencies": {
+    "through2": "^3.0.1",
+    "vinyl": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-fs": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-mocha": "^6.0.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.2",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3"
+  }
+}
