@@ -1,6 +1,7 @@
 
 const through = require('through2')
 const path = require('path')
+const slash = require('slash')
 const Vinyl = require('vinyl')
 
 class GenerateIndex extends through.ctor() {
@@ -38,12 +39,17 @@ class GenerateIndex extends through.ctor() {
     return path.replace(/\.[^/.]+$/, '')
   }
 
-  makeRequire (group, file) {
+  baseRequire (file) {
     let toRequire = file.relative
     if (this.opt.dest) {
       toRequire = path.relative(path.resolve(this.opt.dest), file.path)
     }
-    const baseRequire = 'require(' + JSON.stringify('./' + this.trimExt(toRequire)) + ')'
+    toRequire = slash(toRequire)
+    return 'require(' + JSON.stringify('./' + this.trimExt(toRequire)) + ')'
+  }
+
+  makeRequire (group, file) {
+    const baseRequire = this.baseRequire(file)
     const name = this.trimExt(file.basename)
     const required = require(file.path)
     if (typeof required[name] !== 'undefined') {

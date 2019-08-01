@@ -19,6 +19,7 @@
   "author": "Kevin Giguere Lacasse",
   "license": "ISC",
   "dependencies": {
+    "slash": "^3.0.0",
     "through2": "^3.0.1",
     "vinyl": "^2.2.0"
   },
