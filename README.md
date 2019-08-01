@@ -40,7 +40,7 @@ module.exports = {
 }
 ```
 
-## options## options
+## options
 Some options can be specified, the default are:
 
 ```js
