@@ -1,6 +1,6 @@
 {
   "name": "gulp-require-index",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate a index.js file that is exporting all the specified files",
   "main": "index.js",
   "repository": {
